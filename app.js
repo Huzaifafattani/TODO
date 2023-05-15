@@ -3,7 +3,10 @@ var list = document.getElementById("list");
 
 function addTodo(){
     var todo_item = document.getElementById("todo-item")
-
+    if(!todo_item.value){
+        alert("Enter Value!")
+        return
+    }
     var li = document.createElement("li")
     var liText = document.createTextNode(todo_item.value)
     
